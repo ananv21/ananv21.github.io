@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Are People Too Superstitious to Have Babies on the 13th?</title>
+    <style>
+        h1 {
+            font-family: American Typewriter, serif;
+            font-style: normal;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Are People Too Superstitious to Have Babies on the 13th?</h1>
+
+    <div class="button-container">
+        <button id="previous">Previous</button>
+        <button id="next">Next</button>
+    </div>
+
+    <div id="scene-0" class="scene active-center" style="margin: 100px;border: 1px solid #ccc;background-color: #f8efe7; height: 300px">
+        <div class="text-container" style = "margin-top: 20px;margin-left:50px;width: 1000px;font-size: 25px;">
+            <p><strong>The number 13</strong> is considered to be an unlucky number under common superstition.
+                But just how significant might the impact of this superstition be? Let's analyze
+            US birth data from 1994-2014 to see how dates falling on the 13th correlate to birth trends.
+        Use the buttons at the top-right to navigate! </p> 
+        </div>
+    </div>
+
+    <div id="scene-1" class="scene">
+        <div class="chart-container">
+            <div id="lollipop-chart"></div>
+        </div>
+        <div class="text-container">
+            <h2>1: The Least Popular Birthdays</h2>
+            <p>Dates that fall on the 25th, 31st, and 24th appear to have the lowest number of births on average. 
+                This is followed by the 13th - <b>note that unlike the other dates experiencing fewer births on average, 
+                this date does not occur around a major American holiday!</b></p>
+            <p>Hover over the points to view the exact number of average births for each date! You can also select how 
+                many dates you'd like to view data for.</p>
+            <select id="bottom-n-select">
+                <label for="sort">Select number of dates to view: </label>
+                <option value="5">5</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="scene-2" class="scene">
+        <div class="chart-container">
+            <div id="line-chart-1"></div>
+        </div>
+        <div class="text-container">
+            <h2>2: Birth Trends for Dates falling on the 13th vs Not</h2>
+            <p>Fewer births seem to occur on the 13th of the month, but has this always been the case?</p> 
+            <p>Birth trends between 1994-2014 show that dates falling on the 13th of the month generally 
+                have fewer births on average than dates that do not fall on the 13th, but notice
+                that there are some exceptions! <b>Hover over the chart to get a better idea of where these occur.</b>
+            </p>
+        </div>
+    </div>
+
+    <div id="scene-3" class="scene">
+        <div class="chart-container">
+            <div id="line-chart-2"></div>
+        </div>
+        <div class="text-container">
+            <h2>3: Birth Trends for Dates falling on the 13th by Day of Week</h2>
+            <p>Friday the 13th holds an especially significant place in superstition, but is this 
+                day really that unpopular? </p>
+            <p>When comparing birth trends for dates falling on the 13th across different days of
+                the week, we find that <b>weekends tend to have the fewest births on average</b>. This may not
+                have much to do with the 13th - hospital wards have reduced staff availability on weekends.
+                <b>But it does seem that between 1994-2014, Friday the 13th has had relatively fewer births
+                on average than other weekdays falling on the 13th, with the exception of Monday.</b>
+            </p>
+            <p>Hover over the chart to get a better look at the data!</p>
+        </div>
+    </div>
+
+    <div id="tooltip" class="hidden">
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Load d3-annotation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/1.12.1/d3-annotation.min.js"></script>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>

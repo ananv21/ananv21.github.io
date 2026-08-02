@@ -1,0 +1,167 @@
+body {
+  font-family: American Typewriter, serif;
+  background-color: #f4dbc1;
+}
+
+/* Container Styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 78rem;
+  height: 37rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 12px 12px 2px 1px var(--blue-alpha);
+  transition: var(--dark-mode-transition-time);
+}
+
+.inner-container {
+  font-size: 1.275rem;
+  word-break: break-word;
+  hyphens: manual;
+  display: flex;
+  flex-direction: row;
+}
+
+.title-text {
+  font-weight: 600;
+  font-size: 2.3rem;
+  background-color: var(--blue);
+  padding: 1rem;
+  color: white;
+  text-align: left;
+  width: 100%;
+  animation: var(--default-popin);
+  transition: var(--dark-mode-transition-time);
+}
+
+/* Button Container Styles */
+.button-container {
+    width: 80%;
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#bottom-n-select {
+    font-size: medium;
+}
+
+/* Scene Styles */
+.scene {
+    display: none;
+}
+
+.active-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    align-items: start;
+}
+
+.active-center {
+    display: grid;
+    place-items: center;
+}
+
+/* Chart Container Styles */
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text Container Styles */
+.text-container {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-style: normal;
+    text-wrap: balance;
+    font-size: large;
+    font-family: American Typewriter, serif;
+}
+
+/* SVG Styles */
+svg {
+    border: 1px solid #ccc;
+    background-color: #f8efe7;
+}
+
+/* Button Styles */
+button {
+    background-color: #ac2409;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: American Typewriter, serif;
+}
+
+button:hover {
+    background-color: #d0280b;
+}
+
+/* Tooltip Styles */
+#tooltip {
+    background-color: #b6b0af;
+    position: absolute;
+    padding: 5px;
+    pointer-events: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0;
+}
+
+/* Header Styles */
+h1 {
+    text-align: center;
+    color: rgb(180, 39, 24);
+    margin-bottom: 20px;
+}
+
+/* Axis Styles */
+.axis text {
+    font-size: 12px;
+}
+
+.axis path, .axis line {
+    shape-rendering: crispEdges;
+}
+
+/* Line Styles */
+.line {
+    fill: none;
+    stroke: rgb(180, 39, 24);
+    stroke-width: 1.5;
+}
+
+.axis path {
+    stroke: #ddd;
+}
+
+/* Annotation Styles */
+rect.annotation-note-bg {
+  fill: none; /* or #fff / white */
+}
+
+.connector {
+  stroke: black !important;
+  stroke-width: 2px;
+  stroke-dasharray: 2, 4;
+}
+.connector-end {
+  stroke: black !important;
+  fill: black !important;
+}
